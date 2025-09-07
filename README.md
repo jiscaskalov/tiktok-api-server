@@ -9,7 +9,7 @@ A FastAPI server that uses TikTokApi to fetch video info and related videos.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/tiktok-api-server.git
+git clone https://github.com/jiscaskalov/tiktok-api-server.git
 cd tiktok-api-server
 ```
 
