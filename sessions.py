@@ -2,7 +2,7 @@ import asyncio
 import os
 from TikTokApi import TikTokApi
 
-NUM_SESSIONS = 5
+NUM_SESSIONS = int(os.getenv("NUM_SESSIONS", 5))
 api_instance: TikTokApi = None
 
 async def grab_token(session, index):
