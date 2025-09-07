@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  tiktok-server:
+    build: .
+    environment:
+      - NUM_SESSIONS=${NUM_SESSIONS:-5}
+      - TIKTOK_BROWSER=${TIKTOK_BROWSER:-chromium}
+    ports:
+      - "8000:8000"
