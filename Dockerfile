@@ -1,14 +1,13 @@
-FROM python:3.12-slim
-
-WORKDIR /app
+FROM python:3.12-slim                                                                                  
+                                                                                                       
+WORKDIR /app                                                                                           
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN playwright install
-
-EXPOSE 8000
+RUN playwright install-deps
+RUN python -m playwright install
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
