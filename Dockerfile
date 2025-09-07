@@ -10,4 +10,4 @@ COPY . .
 RUN playwright install-deps
 RUN python -m playwright install
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "${TIKTOK_API_PORT}"]
